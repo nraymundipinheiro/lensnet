@@ -112,7 +112,7 @@ def train(stats: list, ml_vars: list):
     
     logging.info("Initial training...")
     for epoch in range(num_epochs):
-        print(f"\n\n{BOLD_BLUE}EPOCH {epoch+1}")
+        print(f"\n\n{BOLD_BLUE}EPOCH {epoch+1}/{num_epochs}")
         print(f"{"-" * TERMINALSIZE}{RESET}")
         
         model.train()
