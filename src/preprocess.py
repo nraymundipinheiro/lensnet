@@ -23,6 +23,14 @@ from tqdm import tqdm
 from utils.format import *
 
 
+message = f"{DIM}%(asctime)s{RESET}\t\t{BOLD_YELLOW}%(message)s{RESET}"
+dashes = "-" * TERMINALSIZE
+logging.basicConfig(
+    level = logging.INFO,
+    format = f"\n\n{message}\n{dashes}"
+)
+    
+
 # ──────────────────────────────────────────────────────────────────────────────
 # Erase already existing images
 # ──────────────────────────────────────────────────────────────────────────────
@@ -150,13 +158,6 @@ def preprocess(split_fractions=[0.70, 0.15, 0.15]) -> tuple[np.ndarray, np.ndarr
     """
     Complete function that performs all the preprocessing.
     """
-    
-    message = f"{DIM}%(asctime)s{RESET}\t\t{BOLD_YELLOW}%(message)s{RESET}"
-    dashes = "-" * TERMINALSIZE
-    logging.basicConfig(
-        level = logging.INFO,
-        format = f"\n\n{message}\n{dashes}"
-    )
 
     logging.info("Emptying processed subfolders...")
     clear_folder("data/processed/train/negative")

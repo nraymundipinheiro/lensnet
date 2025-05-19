@@ -1,6 +1,15 @@
+#!/usr/bin/env python3
+"""
+train.py
+
+Train the convolutional neural network.
+"""
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Imports
+# ──────────────────────────────────────────────────────────────────────────────
+
 import logging
-import numpy as np
-from pathlib import Path
 from tqdm import tqdm
 
 import torch
@@ -14,15 +23,23 @@ from src.classes.LensDataset import LensDataset
 from utils.format import *
 
 
+message = f"{DIM}%(asctime)s{RESET}\t\t{BOLD_YELLOW}%(message)s{RESET}"
+dashes = "-" * TERMINALSIZE
+logging.basicConfig(
+    level = logging.INFO,
+    format = f"\n\n{message}\n{dashes}"
+)
 
-def training(stats: list, ml_vars: list):
-    
-    message = f"{DIM}%(asctime)s{RESET}\t\t{BOLD_YELLOW}%(message)s{RESET}"
-    dashes = "-" * TERMINALSIZE
-    logging.basicConfig(
-        level = logging.INFO,
-        format = f"\n\n{message}\n{dashes}"
-    )
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Train
+# ──────────────────────────────────────────────────────────────────────────────
+
+
+def train(stats: list, ml_vars: list):
+    """
+    Train the convolutional neural network.
+    """
     
     batch_size, learning_rate, num_epochs = ml_vars
     mean, std = stats
@@ -57,7 +74,6 @@ def training(stats: list, ml_vars: list):
         root_dir = "data/processed/test",
         transform = all_transforms
     )
-    
 
     # Create training, validating, and testing loaders
     train_loader = DataLoader(
@@ -79,24 +95,26 @@ def training(stats: list, ml_vars: list):
         num_workers = num_workers
     )
 
+
     # Define model
     model = models.resnet18(pretrained=True)
     model.fc = Linear(model.fc.in_features, num_classes)
     model = model.to(device)
 
     # Loss and optimizer
-    # Let's use cross-entropy
     criterion = CrossEntropyLoss()
     optimizer = Adam(model.parameters(), lr=learning_rate)
 
-    # Training loop
+
+    # --------------------------
+    # TRAINING & VALIDATING LOOP
+    # --------------------------
+    
+    logging.info("Initial training...")
     for epoch in range(num_epochs):
-        print(f"\n\n\n{BOLD_BLUE}EPOCH {epoch+1}")
+        print(f"\n\n{BOLD_BLUE}EPOCH {epoch+1}")
         print(f"{"-" * TERMINALSIZE}{RESET}")
         
-        # Put the model in training mode
-        
-        logging.info("Initial training...")
         model.train()
         
         # Running total of the training loss over all samples in this epoch
@@ -129,9 +147,8 @@ def training(stats: list, ml_vars: list):
         
         # Compute average training loss
         epoch_loss = running_loss / len(train_loader.dataset)
-            
-        logging.info("Evaluating model...")
-        # Validate
+        
+        
         model.eval()
         
         # Used to accumulate validation loss and number of correct predictions
@@ -184,31 +201,28 @@ def training(stats: list, ml_vars: list):
             print(f"Validating loss:    {validate_loss*100:.2f}%")
             print(f"Accuracy:           {validate_accuracy*100:.2f}%")
             print(f"{RESET}")
-            
-
-    # Test evaluation
-    tn_images = []
-    tp_images = []
-    fn_images = []
-    fp_images = []
     
+    
+    # -------
+    # TESTING
+    # -------
+    
+    tn_images, tp_images, fn_images, fp_images = [], [], [], []
     
     logging.info("Testing model...")
     model.eval()
     
-    all_labels = []
-    all_predictions = []
+    all_labels, all_preds = [], []
     test_accuracy = 0.0
+    
     with torch.no_grad():
-        
         message = f"{"Testing sets":20.20}"
         for images, labels in tqdm(test_loader, desc=message):
             
             images, labels = images.to(device), labels.to(device)
             preds = model(images).argmax(1)
-            test_accuracy += \
-                (preds == labels).sum().item() / len(preds)
-            all_predictions.extend(preds.numpy().tolist())
+            test_accuracy += (preds == labels).sum().item() / len(preds)
+            all_preds.extend(preds.numpy().tolist())
             all_labels.extend(labels.numpy().tolist())
                 
             
@@ -227,8 +241,6 @@ def training(stats: list, ml_vars: list):
             fp = ((labels == 0) & (preds == 1)).nonzero(as_tuple=True)[0]
             for i in fp:
                 fp_images.append(images[i])
-
-    cm = confusion_matrix(all_labels, all_predictions, labels=[0,1])
 
 
     if test_accuracy >= 0.95:
@@ -252,6 +264,9 @@ def training(stats: list, ml_vars: list):
         print(f"{RESET}")
         
         
+    # Confusion matrix
+    cm = confusion_matrix(all_labels, all_preds, labels=[0,1])
+    
     logging.info(f"{BOLD_GREEN}Training complete!{RESET}")
     
-    return cm, tn_images, tp_images, fn_images, fp_images
+    return cm, [tn_images, tp_images, fn_images, fp_images]
