@@ -171,34 +171,33 @@ def train(stats: list, ml_vars: list):
         
         
         # Average again
-        validate_loss /= len(validate_loader.dataset)
         validate_accuracy /= len(validate_loader.dataset)
         
         if validate_accuracy >= 0.95:
             print(f"{GREEN}")
-            print(f"Training loss:      {epoch_loss*100:.2f}%")
-            print(f"Validating loss:    {validate_loss*100:.2f}%")
+            print(f"Training loss:      {epoch_loss:.2f}")
+            print(f"Validating loss:    {validate_loss:.2f}")
             print(f"Accuracy:           {validate_accuracy*100:.2f}%")
             print(f"{RESET}")
             
         elif validate_accuracy >= 0.90:
             print(f"{BLUE}")
-            print(f"Training loss:      {epoch_loss*100:.2f}%")
-            print(f"Validating loss:    {validate_loss*100:.2f}%")
+            print(f"Training loss:      {epoch_loss:.2f}")
+            print(f"Validating loss:    {validate_loss:.2f}")
             print(f"Accuracy:           {validate_accuracy*100:.2f}%")
             print(f"{RESET}")
             
         elif validate_accuracy >= 0.80:
             print(f"{YELLOW}")
-            print(f"Training loss:      {epoch_loss*100:.2f}%")
-            print(f"Validating loss:    {validate_loss*100:.2f}%")
+            print(f"Training loss:      {epoch_loss:.2f}")
+            print(f"Validating loss:    {validate_loss:.2f}")
             print(f"Accuracy:           {validate_accuracy*100:.2f}%")
             print(f"{RESET}")
 
         else:
             print(f"{RED}")
-            print(f"Training loss:      {epoch_loss*100:.2f}%")
-            print(f"Validating loss:    {validate_loss*100:.2f}%")
+            print(f"Training loss:      {epoch_loss:.2f}")
+            print(f"Validating loss:    {validate_loss:.2f}")
             print(f"Accuracy:           {validate_accuracy*100:.2f}%")
             print(f"{RESET}")
     
@@ -221,7 +220,7 @@ def train(stats: list, ml_vars: list):
             
             images, labels = images.to(device), labels.to(device)
             preds = model(images).argmax(1)
-            test_accuracy += (preds == labels).sum().item() / len(preds)
+            test_accuracy += (preds == labels).sum().item()
             all_preds.extend(preds.numpy().tolist())
             all_labels.extend(labels.numpy().tolist())
                 
@@ -242,6 +241,7 @@ def train(stats: list, ml_vars: list):
             for i in fp:
                 fp_images.append(images[i])
 
+    test_accuracy /= len(test_loader.dataset)
 
     if test_accuracy >= 0.95:
         print(f"{GREEN}")

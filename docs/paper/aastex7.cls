@@ -7315,7 +7315,7 @@ ltxgrid%
 \vglue-18pt
 {\footnotesize
 \raggedright
-{\sc Draft version \today}\\[2pt]
+{\sc \today}\\[2pt]
 {\footnotesize
 Typeset using \LaTeX\ {\bf modern} style in AASTeX7}
 \par\vspace*{-\baselineskip}\vspace*{0.625in}
@@ -8085,7 +8085,7 @@ For more details, see:\\
 
 
  \def\journalinfo#1{\gdef\@journalinfo{#1}}
- \journalinfo{Draft version \today}
+ \journalinfo{\today}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

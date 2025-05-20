@@ -8,7 +8,19 @@
 %%
 %% RevTeX is no longer used in AASTeX v7.
 %%
-\documentclass[linenumbers,trackchanges,twocolumn]{aastex7}
+\documentclass[trackchanges,twocolumn]{aastex7}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{
+  language=python,
+  basicstyle=\ttfamily\small,
+  frame=single,                             % draws a border
+  backgroundcolor=\color[gray]{0.95},       % very light gray
+  rulecolor=\color[gray]{0.80},             % slightly darker border
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true
+}
 %%
 %% This initial command takes arguments that can be used to easily modify 
 %% the output of the compiled manuscript. Any combination of arguments can be 
@@ -203,18 +215,41 @@ Add abstract here.
 
 \section{Introduction}
 
-Gravitational lensing takes place when a massive object (such as a galaxy cluster) warps the fabric of space-time, causing light rays to bend, distort, and magnify much like an optical lens. Einstein was the first to describe this prediction in his general theory of relativity, which puts together space and time into a single four-dimensional space-time, whose curvature manifests as gravity. Within this framework, light travels along curved geodesics through the warped space-time, producing magnified and warped images of background sources.
+%Gravitational lensing takes place when a massive object (such as a galaxy cluster) warps the fabric of space-time, causing light rays to bend, distort, and magnify much like an optical lens. Einstein was the first to describe this prediction in his general theory of relativity, which puts together space and time into a single four-dimensional space-time, whose curvature manifests as gravity. Within this framework, light travels along curved geodesics through the warped space-time, producing magnified and warped images of background sources.
 
-Today's large-scale sky surveys, such as LSST, Euclid, and WFIRST, will generate petabytes of imaging data, making manual lens identification impractical and prone to errors. Deep convolutional neural networks provide an automated, scalable solution to detect and classify strong-lensing events \citep{Pourrahmani_2018}. 
+%Today's large-scale sky surveys, such as LSST, Euclid, and WFIRST, will generate petabytes of imaging data, making manual lens identification impractical and prone to errors. Deep convolutional neural networks provide an automated, scalable solution to detect and classify strong-lensing events \citep{pourrahmani2018}.
 
 
 
 
 \section{Deep Learning Framework} \label{sec:deep-learning-framework}
 
+Convolutional neural networks (CNNs) are good for image classification because they automatically build up a hierarchy of visual filters. In the earliest layers, small convolutional kernels learn to detect simple edges, textures, and gradients; in deeper layers, progressively larger receptive fields respond to more complex motifs such as arcs, rings, or even full Einstein-ring structures. Weight sharing across spatial locations keeps the total number of parameters manageable, and pooling layers introduce a good degree of translational invariance (both important when searching for strong-lensing features that can appear anywhere within an LSST cutout).
+
+ \href{https://pytorch.org/}{\tt\string PyTorch} provides an easy-to-understand API for constructing these architectures and handling the training loop. Its {\tt\string Dataset}/{\tt\string DataLoader} objects decouples data I/O from model logic: raw simulations are read once, split into train, validation, and test sets, and then are shuffled, and batched. This pipeline allows me to experiment rapidly with image transforms (rotations, flips, crops), batch sizes, and epoch counts without rewriting the core model code.
+
+The ability to use networks pretrained on large image repositories (e.g. \href{https://www.image-net.org/}{\tt\string ImageNet}) is an effective way to start learning when the custom dataset is relatively small or highly specialized. I adopted a ResNet-50 backbone with frozen weights up through the last convolutional block, replacing only the final fully connected layer with a two-class head (lens vs. non-lens). By fine-tuning this last layer, the model adapts visual filters to the nuances of strong-lensing morphologies, like faint arcs partially obscured by a luminous elliptical galaxy.
+
+In the past, CNNs have been applied to strong‐lensing detection. Early efforts used shallow architectures on hand‐cropped cutouts, while more recent approaches (e.g. {\tt\string LensFlow} \citep{pourrahmani2018}, {\tt\string DeepLens} \citep{lanusse2018}) integrate multi‐scale filters or residual connections to boost sensitivity to faint arcs. Here, I build upon the \href{https://github.com/LSST-strong-lensing/slsim/tree/main}{\tt\string SLSim} simulation toolkit, combining raw image simulations with a flexible {\tt\string PyTorch Dataset}/{\tt\string DataLoader} pipeline to shuffle and batch hundreds of examples on the fly. This lets me experiment with architectural variants (like swapping out the loss criterion and optimization method, number of epochs and batch sizes, and more) without rewriting the data‐handling code.
+
 
 \section{Methodology} \label{sec:methodology}
+
+
 \subsection{Lens Simulation}
+
+I generated realistic LSST-like strong-lens images in four steps: drawing a population of deflector galaxies, drawing a background source population, lens-ray tracing to form lensed images, and building a matching set of non-lenses.
+
+
+\subsubsection{Deflector Population}
+
+First, I defined a cosmology and survey footprint:
+
+\begin{lstlisting}
+import numpy 
+\end{lstlisting}
+
+
 \subsection{Data Preprocessing and Normalization}
 \subsection{Architecture of {\tt\string LensNet}}
 \subsection{Training Procedure}
@@ -249,4 +284,4 @@ Today's large-scale sky surveys, such as LSST, Euclid, and WFIRST, will generate
 
 \end{document}
 
-% End of file `sample7.tex'.
+% End of file `lensnet.tex'.
