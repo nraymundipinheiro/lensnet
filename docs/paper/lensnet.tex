@@ -10,6 +10,7 @@
 %%
 \documentclass[trackchanges,twocolumn]{aastex7}
 \usepackage{xcolor}
+\usepackage{minted}
 \usepackage{listings}
 \lstset{
   language=python,
@@ -244,10 +245,10 @@ I generated realistic LSST-like strong-lens images in four steps: drawing a popu
 \subsubsection{Deflector Population}
 
 First, I defined a cosmology and survey footprint:
-
-\begin{lstlisting}
-import numpy 
-\end{lstlisting}
+\begin{minted}{python}
+from astropy.cosmology import FlatLambdaCDM
+from astropy.units import Quantity
+\end{minted}
 
 
 \subsection{Data Preprocessing and Normalization}

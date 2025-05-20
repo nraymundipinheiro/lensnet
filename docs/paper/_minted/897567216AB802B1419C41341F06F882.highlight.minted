@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{astropy}\PYG{n+nn}{.}\PYG{n+nn}{cosmology}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{FlatLambdaCDM}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{astropy}\PYG{n+nn}{.}\PYG{n+nn}{units}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{Quantity}
+\end{MintedVerbatim}

@@ -1,6 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{k}{\PYGZbs{}documentclass}\PYG{n+nb}{\PYGZob{}}article\PYG{n+nb}{\PYGZcb{}}
-\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
-Einstein said \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{E}\PYG{o}{=}\PYG{n+nb}{mc}\PYG{n+nb}{\PYGZca{}}\PYG{l+m}{2}\PYG{l+s}{\PYGZdl{}}!
-\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
-\end{MintedVerbatim}

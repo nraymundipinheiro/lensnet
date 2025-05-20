@@ -1,6 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYGZbs{}\PYG{n}{documentclass}\PYG{p}{\PYGZob{}}\PYG{n}{article}\PYG{p}{\PYGZcb{}}
-\PYGZbs{}\PYG{n}{begin}\PYG{p}{\PYGZob{}}\PYG{n}{document}\PYG{p}{\PYGZcb{}}
-\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{numpy}
-\PYGZbs{}\PYG{n}{end}\PYG{p}{\PYGZob{}}\PYG{n}{document}\PYG{p}{\PYGZcb{}}
-\end{MintedVerbatim}

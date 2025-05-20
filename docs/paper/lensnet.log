@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.1)  19 MAY 2025 19:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.1)  19 MAY 2025 19:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -455,28 +455,115 @@ Package: lineno 2025/01/29 line numbers on paragraphs v5.4
 \bframebox=\box88
 LaTeX Info: Redefining \\ on input line 3187.
 ))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2025/03/06 v3.6.0 Yet another Pygments shim for LaTeX
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2025/03/04 v1.12.0 fvextra - extensions and patches for fancyv
+rb
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count357
+\FV@InFile=\read3
+\FV@TabBox=\box89
+\c@FancyVerbLine=\count358
+\FV@StepNumber=\count359
+\FV@OutFile=\write3
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+\c@FancyVerbWriteLine=\count360
+\c@FancyVerbBufferLine=\count361
+\c@FV@TrueTabGroupLevel=\count362
+\c@FV@TrueTabCounter=\count363
+\FV@TabBox@Group=\box90
+\FV@bgcolorstructbox=\box91
+\FV@TmpLength=\skip73
+\c@FV@HighlightLinesStart=\count364
+\c@FV@HighlightLinesStop=\count365
+\FV@LoopCount=\count366
+\FV@NCharsBox=\box92
+\FV@BreakIndent=\dimen176
+\FV@BreakIndentNChars=\count367
+\FV@BreakSymbolSepLeft=\dimen177
+\FV@BreakSymbolSepLeftNChars=\count368
+\FV@BreakSymbolSepRight=\dimen178
+\FV@BreakSymbolSepRightNChars=\count369
+\FV@BreakSymbolIndentLeft=\dimen179
+\FV@BreakSymbolIndentLeftNChars=\count370
+\FV@BreakSymbolIndentRight=\dimen180
+\FV@BreakSymbolIndentRightNChars=\count371
+\c@FancyVerbLineBreakLast=\count372
+\FV@LineBox=\box93
+\FV@LineIndentBox=\box94
+\c@FV@BreakBufferDepth=\count373
+\FV@LineWidth=\dimen181
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/latex2pydata/latex2pydata.sty
+Package: latex2pydata 2025/03/03 v0.5.0 latex2pydata - write data to file in Py
+thon literal format
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex
+\pgfkeys@tmptoks=\toks29
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks30
+\pgfopts@list@add@b@toks=\toks31
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count374
+\float@exts=\toks32
+\float@box=\box95
+\@float@everytoks=\toks33
+\@floatcapt=\box96
+)
+\c@minted@FancyVerbLineTemp=\count375
+\@float@every@listing=\toks34
+\c@listing=\count376
+)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count357
-\lst@gtempboxa=\box89
-\lst@token=\toks27
-\lst@length=\count358
-\lst@currlwidth=\dimen176
-\lst@column=\count359
-\lst@pos=\count360
-\lst@lostspace=\dimen177
-\lst@width=\dimen178
-\lst@newlines=\count361
-\lst@lineno=\count362
-\lst@maxwidth=\dimen179
+\lst@mode=\count377
+\lst@gtempboxa=\box97
+\lst@token=\toks35
+\lst@length=\count378
+\lst@currlwidth=\dimen182
+\lst@column=\count379
+\lst@pos=\count380
+\lst@lostspace=\dimen183
+\lst@width=\dimen184
+\lst@newlines=\count381
+\lst@lineno=\count382
+\lst@maxwidth=\dimen185
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-\c@lstnumber=\count363
-\lst@skipnumbers=\count364
-\lst@framebox=\box90
+\c@lstnumber=\count383
+\lst@skipnumbers=\count384
+\lst@framebox=\box98
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/09/23 1.10c listings configuration
@@ -487,53 +574,56 @@ Package: listings 2024/09/23 1.10c (Carsten Heinz)
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 Class aastex7 Info: Unrecognized array package. Please update this document cla
-ss! (Proceeding with fingers crossed.) on input line 125.
-Class aastex7 Info: Patching unrecognized longtable package. (Proceeding with f
-ingers crossed) on input line 125.
-Class aastex7 Info: cite was not loaded (OK!) on input line 125.
-Class aastex7 Info: mcite was not loaded (OK!) on input line 125.
-Class aastex7 Info: multicol was not loaded (OK!) on input line 125.
+ss! (Proceeding with fingers crossed.) on input line 126.
 
+
+Class aastex7 Warning: Repair the float package.
+
+Class aastex7 Info: Patching unrecognized longtable package. (Proceeding with f
+ingers crossed) on input line 126.
+Class aastex7 Info: cite was not loaded (OK!) on input line 126.
+Class aastex7 Info: mcite was not loaded (OK!) on input line 126.
+Class aastex7 Info: multicol was not loaded (OK!) on input line 126.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count365
-\l__pdf_internal_box=\box91
+\l__color_backend_stack_int=\count385
+\l__pdf_internal_box=\box99
 )
 (./lensnet.aux)
 \openout1 = `lensnet.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
 
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count366
-\scratchdimen=\dimen180
-\scratchbox=\box92
-\nofMPsegments=\count367
-\nofMParguments=\count368
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count369
-\MPscratchDim=\dimen181
-\MPnumerator=\count370
-\makeMPintoPDFobject=\count371
-\everyMPtoPDFconversion=\toks29
+\scratchcounter=\count386
+\scratchdimen=\dimen186
+\scratchbox=\box100
+\nofMPsegments=\count387
+\nofMParguments=\count388
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count389
+\MPscratchDim=\dimen187
+\MPnumerator=\count390
+\makeMPintoPDFobject=\count391
+\everyMPtoPDFconversion=\toks37
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -543,43 +633,61 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 125.
+Package hyperref Info: Link coloring ON on input line 126.
 
 (./lensnet.out) (./lensnet.out)
-\@outlinefile=\write3
-\openout3 = `lensnet.out'.
+\@outlinefile=\write4
+\openout4 = `lensnet.out'.
 
-\c@lstlisting=\count372
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)
+\c@lstlisting=\count392
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 21
-6.
+7.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 216
+LaTeX Font Info:    Trying to load font information for U+msa on input line 217
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 216
+LaTeX Font Info:    Trying to load font information for U+msb on input line 217
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-Package hyperref Warning: Ignoring empty anchor on input line 216.
+Package hyperref Warning: Ignoring empty anchor on input line 217.
 
 <Orcid-ID.png, id=57, 220.825pt x 220.825pt>
 File: Orcid-ID.png Graphic file (type png)
 <use Orcid-ID.png>
-Package pdftex.def Info: Orcid-ID.png  used on input line 216.
+Package pdftex.def Info: Orcid-ID.png  used on input line 217.
 (pdftex.def)             Requested size: 9.0pt x 8.99997pt.
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 249.
-(./lensnet.bbl [1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdf
-tex.map} <./Orcid-ID.png>]) [2] (./lensnet.aux)
+\pydata@fh@_75A0EE3A320048A1170C894E8AF698E4.data.minted=\write5
+\openout5 = `_75A0EE3A320048A1170C894E8AF698E4.data.minted'.
+
+runsystem(latexminted config  --timestamp 20250519195527 75A0EE3A320048A1170C89
+4E8AF698E4)...executed safely (allowed).
+
+(./_75A0EE3A320048A1170C894E8AF698E4.config.minted)
+runsystem(latexminted cleanconfig  --timestamp 20250519195527 75A0EE3A320048A11
+70C894E8AF698E4)...executed safely (allowed).
+
+
+(./_minted/default.style.minted)
+(./_minted/897567216AB802B1419C41341F06F882.highlight.minted
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
+) (./lensnet.bbl
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Orc
+id-ID.png>]) [2] (./lensnet.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -588,30 +696,28 @@ Package rerunfilecheck Info: File `lensnet.out' has not changed.
 (rerunfilecheck)             Checksum: FB9609288B0EDFB795E5AC33DF8C3C31;1814.
  ) 
 Here is how much of TeX's memory you used:
- 14575 strings out of 473190
- 213173 string characters out of 5715801
- 859917 words of memory out of 5000000
- 37651 multiletter control sequences out of 15000+600000
- 568352 words of font info for 73 fonts, out of 8000000 for 9000
+ 18325 strings out of 473190
+ 329495 string characters out of 5715801
+ 1070606 words of memory out of 5000000
+ 41339 multiletter control sequences out of 15000+600000
+ 568185 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,7n,93p,883b,1254s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,7n,93p,883b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
 /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
 /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loc
-al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/tex
-live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
-ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/
-2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
-025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on lensnet.pdf (2 pages, 190905 bytes).
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
+al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on lensnet.pdf (2 pages, 174742 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
+ 142 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
+ 17 named destinations out of 1000 (max. 500000)
  110 words of extra memory for PDF output out of 10000 (max. 10000000)
 
